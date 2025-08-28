@@ -1,0 +1,25 @@
+# Name
+# Názov workflow
+name: First Workflow
+
+# Trigger
+# Kedy sa má workflow vykonať
+# workflow_dispatch – Manuálne sa spustí workflow
+on: workflow_dispatch
+
+# Jobs
+# Úlohy
+# Nepíšeme hneď za dvojbodku ale dáme nový riadok a jeden tab.
+# Platí to pri Jobs aj first-job.
+# YAML pracuje s osadeniami
+jobs:
+  # first-job je jedinný identifikátor, ktorý má ľubovoľný názov
+  first-job:
+    # definujeme runner, je to OS a GitHub má ich zoznam
+    # Nainštaluje sa na prostredí a cez to sa to potom spúšťa.
+    runs-on: ubuntu-latest
+    steps:
+      – name: Print greeting
+        run: echo "Hello World"
+      – name: Print goodbye
+        run: echo "Done – bye!"
